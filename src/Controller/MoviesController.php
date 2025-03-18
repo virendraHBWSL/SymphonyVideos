@@ -13,8 +13,7 @@ class MoviesController extends AbstractController
     #[Route('/movies', name: 'movies')]
     public function index(MovieRepository $movieRepository): Response
     {
-        $movies = $movieRepository->findAll();
-        dd($movies);
+      
 
         return $this->render('index.html.twig');
     }
